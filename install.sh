@@ -5,7 +5,7 @@ echo "Starting installation of macOS automation scripts..."
 # Install Quick Actions
 echo "Installing Quick Actions..."
 mkdir -p ~/Library/Services/
-cp workflows/*.workflow ~/Library/Services/
+cp -R workflows/*.workflow ~/Library/Services/
 
 # Install AppleScripts
 echo "Installing AppleScripts..."
