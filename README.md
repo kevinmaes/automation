@@ -39,18 +39,45 @@ This repository contains automation scripts and workflows for macOS applications
 
 ---
 
-### Option 2: Quick Terminal Installation
+### Option 2: Interactive Terminal Installation
 
-Use the provided setup script to install everything automatically:
+Use the provided setup script for an interactive installation:
 
 ```bash
 bash install.sh
 ```
 
-This will:
+The installer will:
 
-- Copy Quick Actions to `~/Library/Services/`
-- Copy AppleScripts to `~/Library/Scripts/`
+1. Display all available scripts grouped by type (Quick Actions and AppleScripts)
+2. Let you choose which scripts to install:
+   - Enter specific numbers (e.g., "1 3") to install selected scripts
+   - Enter "a" to install all scripts
+   - Enter "q" to exit without installing
+
+Example output:
+
+```
+macOS Automation Scripts Installer
+
+Available Quick Actions:
+1) Convert Excel -> Numbers.workflow
+
+Available AppleScripts:
+2) example.applescript
+
+Installation options:
+a) Install all scripts
+q) Quit without installing
+
+Enter the numbers of scripts to install (separated by spaces)
+Example: 1 3 4 or 'a' for all:
+```
+
+Selected scripts will be installed to their appropriate locations:
+
+- Quick Actions → `~/Library/Services/`
+- AppleScripts → `~/Library/Scripts/`
 
 ---
 
